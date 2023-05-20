@@ -13,4 +13,5 @@ code
 npm init -y 
 
 Instalar todas las dependencias en los package.json y package-lock.json
+Se agregan todos los configs
 
