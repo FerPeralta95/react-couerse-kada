@@ -18,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FerPeralta95/react-couerse-kada.git"
+    "url": "git+https://github.com/FerPeralta95/react-course-kada.git"
   },
   "keywords": [],
   "author": "ferperalta",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FerPeralta95/react-couerse-kada/issues"
+    "url": "https://github.com/FerPeralta95/react-course-kada/issues"
   },
-  "homepage": "https://github.com/FerPeralta95/react-couerse-kada#readme",
+  "homepage": "https://github.com/FerPeralta95/react-course-kada#readme",
   "devDependencies": {
     "@vitejs/plugin-react": "^2.1.0",
     "eslint": "^8.24.0",
