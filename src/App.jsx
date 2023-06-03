@@ -1,21 +1,33 @@
 //Dependencies
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 //Components
 import { SearchParams } from './components/SearchParams';
-import { Detail } from './components/Detail';
+import { DetailsWithErrorBoundary } from './components/Detail';
+
+const queryClient = new QueryClient({
+  defaultOpions: {
+    queries: {
+      stateTime: Infinity,
+      cacheTime: Infinity,
+    },
+  },
+});
 
 const App = () => (
   <div>
     <BrowserRouter>
-      <header>
-        <Link to="/">Adop Me!</Link>
-      </header>
-      <Routes>
-        <Route path="/details/:id" element={<Detail />} />
-        <Route path="/" element={<SearchParams />} />
-      </Routes>
+      <QueryClientProvider client={queryClient}>
+        <header>
+          <Link to="/">Adop Me!</Link>
+        </header>
+        <Routes>
+          <Route path="/details/:id" element={<DetailsWithErrorBoundary />} />
+          <Route path="/" element={<SearchParams />} />
+        </Routes>
+      </QueryClientProvider>
     </BrowserRouter>
   </div>
 );
